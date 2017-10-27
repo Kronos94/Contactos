@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Contactos.Vistas;
 using Xamarin.Forms;
 
 namespace Contactos
@@ -13,9 +13,9 @@ namespace Contactos
         {
             InitializeComponent();
 
-            MainPage = new Contactos.MainPage();
+            MainPage = new MainView();
         }
-
+        
         protected override void OnStart()
         {
             // Handle when your app starts
