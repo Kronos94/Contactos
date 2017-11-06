@@ -10,6 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView HorizontalAlignment="Left" Height="193" Margin="660,497,0,0" VerticalAlignment="Top" Width="619"/>
 
     </Grid>
 </forms:WindowsPage>

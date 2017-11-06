@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Contactos.Vistas;
+using Contactos.Views;
 using Xamarin.Forms;
 
 namespace Contactos

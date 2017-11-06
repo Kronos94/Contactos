@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contactos.Codigo
+namespace Contactos.Code
 {
-    class Contacto
+   public class Contacto
     {
         /*DECLARACION DE VARIABLES*/
         private string nombre, edad, dni;

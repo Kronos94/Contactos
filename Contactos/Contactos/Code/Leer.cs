@@ -5,15 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contactos.Codigo
+namespace Contactos.Code
 {
     class Leer
     {
         public static List<Contacto> LeerArchivo(String ruta)
         {
-            var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream(ruta);
-            StreamReader objReader = new StreamReader(stream);
+            
+            StreamReader objReader = new StreamReader(GenerateStreamFromString(ruta));
             List<Contacto> arrText = new List<Contacto>();
             String edad;
             String nombre;
@@ -28,8 +27,17 @@ namespace Contactos.Codigo
                     arrText.Add(new Contacto(nombre, edad, dni));
 
             } while (nombre != null && edad != null && dni != null);
-            objReader.Close();
             return arrText;
+        }
+
+        public static Stream GenerateStreamFromString(string s)
+        {
+            MemoryStream stream = new MemoryStream();
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write(s);
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
         }
     }
 }
