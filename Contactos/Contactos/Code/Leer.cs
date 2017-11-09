@@ -9,6 +9,11 @@ namespace Contactos.Code
 {
     class Leer
     {
+        /// <summary>
+        /// Metodo para leer el archivo introduciendole la ruta de este.
+        /// </summary>
+        /// <param name="ruta">Ruta donde se encontrará el archivo.</param>
+        /// <returns></returns>
         public static List<Contacto> LeerArchivo(String ruta)
         {
             
@@ -29,7 +34,11 @@ namespace Contactos.Code
             } while (nombre != null && edad != null && dni != null);
             return arrText;
         }
-
+        /// <summary>
+        /// Genera una Stream de una cadena para poder leer el archivo.
+        /// </summary>
+        /// <param name="s">Cadena a transformar.</param>
+        /// <returns></returns>
         public static Stream GenerateStreamFromString(string s)
         {
             MemoryStream stream = new MemoryStream();

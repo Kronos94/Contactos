@@ -5,38 +5,50 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="txtBusqueda"
+                <Label x:Name="lblBusqueda"
                        VerticalOptions="Start"
                        HorizontalOptions="Center"
                        WidthRequest="250"
                        Text="Busqueda de contacto:"/>
-                <Entry x:Name="entryBusqueda"
+                <Entry x:Name="txtBusqueda"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="txtMaxEdad"
+                <Label x:Name="lblMaxEdad"
                        VerticalOptions="Start"
                        HorizontalOptions="Center"
                        WidthRequest="250"
-                       Text="Edad minima:"/>
-                <Entry x:Name="entryMaxEdad"
+                       Text="Edad Máxima:"/>
+                <Entry x:Name="txtMaxEdad"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="txtMinEdad"
+                <Label x:Name="lblMinEdad"
                        VerticalOptions="Start"
                        HorizontalOptions="Center"
                        WidthRequest="250"
                        Text="Edad minima:"/>
-                <Entry x:Name="entryMinEdad"
+                <Entry x:Name="txtMinEdad"
                        VerticalOptions="FillAndExpand" 
                        HorizontalOptions="FillAndExpand" />
              </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblError"
+                     VerticalOptions="StartAndExpand"
+                     HorizontalOptions="StartAndExpand"
+                     Text=""/> 
+                <Button x:Name="btnBuscar"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Buscar"
+                    Clicked="btnBuscar_Clicked"/>
 
+            </StackLayout>
             <Label></Label>
 
             <ListView  x:Name="lstContactos"
